@@ -9,6 +9,14 @@ class Timer extends React.Component {
     };
   }
 
+  componentDidMount() {
+    setInterval(() => {
+      this.setState((prevState) => ({
+        value: prevState.value - 1
+      }));
+    }, 1000);
+  }
+
   render() {
     return <div>{this.state.value}</div>;
   }
