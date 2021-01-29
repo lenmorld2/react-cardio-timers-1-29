@@ -17,8 +17,14 @@ class Timer extends React.Component {
         this.setState((prevState) => ({
           value: prevState.value - 1
         }));
+      } else {
+        this.stopTimer();
       }
     }, 1000);
+  }
+
+  componentWillUnmount() {
+    this.stopTimer();
   }
 
   stopTimer = () => {
