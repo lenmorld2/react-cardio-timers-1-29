@@ -5,12 +5,12 @@ class Timer extends React.Component {
     super(props);
 
     this.state = {
-      value: this.props.initial
+      value: Number(this.props.initial)
     };
   }
 
   render() {
-    return <div>{this.props.value}</div>;
+    return <div>{this.state.value}</div>;
   }
 }
 
